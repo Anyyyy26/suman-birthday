@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Surprise — I Love You</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hearts"></div>
+<div class="container center">
+  <h1 class="title-large">Will you marry me?</h1>
+  <p class="scroll-text">Suman, this is your special surprise. I love you more than words — today and always.</p>
+  <div style="margin-top:20px">
+    <button class="btn" onclick="showModal('<h3>She said YES! 🎉</h3><p>Congratulations — a beautiful new chapter begins.</p>', [{label:'Celebrate', onClick:function(){}}])">Say YES</button>
+    <a class="btn" href="index.html" style="margin-left:8px">Back to Start</a>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+// hearts
+(function genHearts(){
+  const container=document.getElementById('hearts');
+  for(let i=0;i<120;i++){
+    const h=document.createElement('div');
+    h.className='heart'; h.innerHTML='❤';
+    h.style.left = Math.random()*100 + 'vw';
+    h.style.fontSize = (12+Math.random()*40) + 'px';
+    h.style.animationDuration = (3+Math.random()*6) + 's';
+    h.style.animationDelay = (Math.random()*2) + 's';
+    container.appendChild(h);
+  }
+})();
+</script>
+</body>
+</html>

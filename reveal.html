@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reveal — Light Up</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hearts"></div>
+<div class="container center">
+  <h1 class="title-large">Have a look...</h1>
+  <p class="scroll-text">Click the button to switch on the light and reveal the gallery I made for you.</p>
+  <button class="btn" id="lightBtn">Turn On Light</button>
+</div>
+<audio id="bgMusic" src="music.mp3" autoplay loop></audio>
+<script src="common.js"></script>
+<script>
+document.getElementById('lightBtn').addEventListener('click', ()=>{
+  // make the page bright
+  document.body.style.background = '#fff';
+  document.body.style.color = '#111';
+  // small modal then redirect to gallery
+  showModal('<h3>Light On ✨</h3><p>Enjoy the photos — I picked them just for you.</p>', [{label:'Open Gallery', onClick:function(){ window.location='gallery.html'; }}]);
+});
+</script>
+</body>
+</html>

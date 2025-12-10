@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Suman — Scroll Wish</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hearts"></div>
+<div class="container center">
+  <div class="brand">Happy Birthday</div>
+  <h1 class="title-large">Suman — Today is all about you ❤️</h1>
+  <div class="scroll-text">
+    <p>My love, on this beautiful day, I just want to remind you how precious you truly are.</p>
+    <p>Every moment with you feels like magic, every smile of yours feels like sunshine, and every heartbeat of mine whispers only one name — <strong>Suman</strong>.</p>
+    <p>I wish this birthday brings you endless happiness, warmth, and love. I hope your heart stays filled with joy, your dreams shine brighter than ever, and your life becomes a garden of beautiful moments.</p>
+    <p>Thank you for existing. Thank you for being you. ❤️</p>
+  </div>
+  <a class="btn" href="reveal.html">Open the Surprise</a>
+</div>
+<script src="common.js"></script>
+<script>
+// auto hearts generation
+(function genHearts(){
+  const container=document.getElementById('hearts');
+  for(let i=0;i<30;i++){
+    const h=document.createElement('div');
+    h.className='heart'; h.innerHTML='❤';
+    h.style.left = Math.random()*100 + 'vw';
+    h.style.fontSize = (12+Math.random()*28) + 'px';
+    h.style.animationDuration = (4+Math.random()*6) + 's';
+    h.style.animationDelay = (Math.random()*3) + 's';
+    container.appendChild(h);
+  }
+})();
+</script>
+</body>
+</html>

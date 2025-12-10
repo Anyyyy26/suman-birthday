@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gallery — For Suman</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1 class="title-large center">Photos & Memories</h1>
+  <div class="slide-wrap center">
+    <img id="slide" class="slide-img" src="img1.jpg" alt="photo">
+  </div>
+  <div class="center"><button class="btn hidden" id="toLetter">Read the Love Letter</button></div>
+</div>
+<script src="common.js"></script>
+<script>
+const images = Array.from({length:20}, (_,i)=>'img'+(i+1)+'.jpg');
+let idx=0;
+const slide = document.getElementById('slide');
+function next(){ idx=(idx+1)%images.length; slide.src = images[idx]; }
+const timer = setInterval(next, 2000);
+// after full cycle stop and show button
+setTimeout(()=>{ clearInterval(timer); document.getElementById('toLetter').classList.remove('hidden'); }, images.length*2000+800);
+document.getElementById('toLetter').addEventListener('click', ()=>{ window.location='letter.html'; });
+</script>
+</body>
+</html>

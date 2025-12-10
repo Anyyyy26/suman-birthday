@@ -1,0 +1,38 @@
+:root{
+  --bg-dark: #1a0f13;
+  --rose: #ff8fb7;
+  --rose-deep: #ff4b8b;
+  --gold: #ffd9a6;
+  --paper: #fff1f5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter, 'Segoe UI', system-ui, -apple-system; background:var(--bg-dark); color: #fff; -webkit-font-smoothing:antialiased;}
+.container{max-width:1100px;margin:24px auto;padding:20px;}
+.header{display:flex;justify-content:space-between;align-items:center;}
+.brand{font-family:'Great Vibes',cursive;font-size:34px;color:var(--rose);}
+.btn{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:12px;color:#fff;cursor:pointer;}
+.center{display:flex;align-items:center;justify-content:center;flex-direction:column;}
+
+/* hearts */
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.heart{position:absolute;font-size:20px;opacity:0.9;transform:translateY(0);animation:floatUp linear infinite}
+@keyframes floatUp{0%{transform:translateY(0) scale(0.9)}100%{transform:translateY(-110vh) scale(1.1);opacity:0}}
+
+/* page-specific */
+.title-large{font-size:36px;color:var(--gold);text-shadow:0 6px 30px rgba(255,200,200,0.06);}
+.scroll-text{max-width:900px;margin:18px auto;font-size:20px;line-height:1.8;color:#ffdfe9;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+
+/* popup style */
+.popup{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:100}
+.modal{background:linear-gradient(180deg,#fff6fb,#fff1f5);padding:22px;border-radius:14px;max-width:520px;text-align:center;color:#3b0b13;border:2px solid rgba(255,140,170,0.25)}
+
+/* slideshow */
+.slide-wrap{display:flex;align-items:center;justify-content:center;height:70vh}
+.slide-img{max-width:90%;max-height:80vh;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+
+/* letter */
+.letter{max-width:900px;margin:18px auto;background:linear-gradient(180deg,#fff1f5,#ffeef2);color:#2b0b11;padding:28px;border-radius:14px;border:1px solid rgba(255,140,170,0.2);font-size:18px;line-height:1.9}
+
+/* footer */
+.footer{margin-top:24px;text-align:center;color:#ffdfe9;font-size:14px}
